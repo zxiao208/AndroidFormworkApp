@@ -1,17 +1,17 @@
 package com.zhaoxiao.androidformworkapp.base;
 
 public abstract class BasePresenter<V extends BaseView> {
-    private V loginView;
+    private V view;
 
-    public V getLoginView() {
-        return loginView;
+    public V getView() {
+        return view;
     }
 
-    public void attachView(V loginView){
-        this.loginView = loginView;
+    public void attachView(V view){
+        this.view = view;
     }
 
     public void detachView(){
-        this.loginView = null;
+        this.view = null;
     }
 }
