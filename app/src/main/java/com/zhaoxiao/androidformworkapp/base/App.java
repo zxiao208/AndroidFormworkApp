@@ -3,6 +3,7 @@ package com.zhaoxiao.androidformworkapp.base;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.support.v7.app.AppCompatDelegate;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
@@ -23,6 +24,10 @@ public class App extends Application {
         return instance;
     }
 
+    static {
+        AppCompatDelegate.setDefaultNightMode(
+                AppCompatDelegate.MODE_NIGHT_NO);
+    }
     @Override
     public void onCreate() {
         super.onCreate();
@@ -30,6 +35,14 @@ public class App extends Application {
         instance = this;
 
         getScreenSize();
+        //初始化屏幕宽高
+        getScreenSize();
+
+        //初始化数据库
+//        Realm.init(getApplicationContext());
+
+        //在子线程中完成其他初始化
+//        InitializeService.start(this);
     }
 
     /**

@@ -1,13 +1,13 @@
 package com.zhaoxiao.androidformworkapp.base;
 
-public abstract class BasePresenter<V extends BaseView> {
-    private V view;
+public abstract class BasePresenter<T extends BaseView> {
+    private T view;
 
-    public V getView() {
+    public T getView() {
         return view;
     }
 
-    public void attachView(V view){
+    public void attachView(T view){
         this.view = view;
     }
 
