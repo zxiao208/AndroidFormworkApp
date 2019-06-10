@@ -3,6 +3,10 @@ package com.zhaoxiao.androidformworkapp.utils;
 import android.support.design.widget.Snackbar;
 import android.view.View;
 
+/**
+ * Created by codeest on 16/9/3.
+ */
+
 public class SnackbarUtil {
 
     public static void show(View view, String msg) {

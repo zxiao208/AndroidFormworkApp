@@ -1,8 +1,8 @@
 package com.zhaoxiao.androidformworkapp.model.db;
 
-import com.codeest.geeknews.model.bean.GoldManagerBean;
-import com.codeest.geeknews.model.bean.ReadStateBean;
-import com.codeest.geeknews.model.bean.RealmLikeBean;
+import com.zhaoxiao.androidformworkapp.model.bean.GoldManagerBean;
+import com.zhaoxiao.androidformworkapp.model.bean.ReadStateBean;
+import com.zhaoxiao.androidformworkapp.model.bean.RealmLikeBean;
 
 import java.util.List;
 
@@ -104,7 +104,7 @@ public class RealmHelper implements DBHelper {
     @Override
     public List<RealmLikeBean> getLikeList() {
         //使用findAllSort ,先findAll再result.sort无效
-        RealmResults<RealmLikeBean> results = mRealm.where(RealmLikeBean.class).findAllSorted("time");
+        RealmResults<RealmLikeBean> results = mRealm.where(RealmLikeBean.class).findAllAsync("time");
         return mRealm.copyFromRealm(results);
     }
 

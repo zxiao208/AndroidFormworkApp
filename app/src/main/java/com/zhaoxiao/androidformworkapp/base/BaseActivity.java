@@ -1,67 +1,80 @@
 package com.zhaoxiao.androidformworkapp.base;
 
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.support.v7.app.AppCompatDelegate;
+import android.view.ViewGroup;
+import com.zhaoxiao.androidformworkapp.di.component.ActivityComponent;
+import com.zhaoxiao.androidformworkapp.di.module.ActivityModule;
+import com.zhaoxiao.androidformworkapp.utils.SnackbarUtil;
 
-public abstract class BaseActivity<V extends BaseView, P extends BasePresenter<V>> extends SimpleActivity {
-    private P presenter;
-    private V view;
+import javax.inject.Inject;
 
-    public P getPresenter() {
-        return presenter;
+public abstract class BaseActivity<T extends BasePresenter> extends SimpleActivity implements BaseView {
+    @Inject
+    protected T mPresenter;
+
+    protected ActivityComponent getActivityComponent(){
+        return  DaggerActivityComponent.builder()
+                .appComponent(App.getAppComponent())
+                .activityModule(getActivityModule())
+                .build();
     }
 
-    public enum TransitionMode {
-        LEFT, RIGHT, TOP, BOTTOM, SCALE, FADE
+    protected ActivityModule getActivityModule(){
+        return new ActivityModule(this);
     }
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        init();
+    protected void onViewCreated() {
+        super.onViewCreated();
+        initInject();
+        if (mPresenter != null)
+            mPresenter.attachView(this);
     }
-
-    private void init() {
-        presenter = createPresenter();
-        if (presenter == null) {
-            throw new NullPointerException("presenter，空指针异常...");
-        }
-        view = createView();
-        if (view == null){
-            throw new NullPointerException("view，空指针异常...");
-        }
-        presenter.attachView(view);
-    }
-
-    protected void setToolBar(Toolbar toolbar, String title) {
-        toolbar.setTitle(title);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
-    }
-
-    public abstract P createPresenter();
-    public abstract V createView();
-
-    protected abstract int getLayout();
-
-    protected abstract void initEventAndData();
 
     @Override
     protected void onDestroy() {
+        if (mPresenter != null)
+            mPresenter.detachView();
         super.onDestroy();
-        if (presenter != null){
-            presenter.detachView();
-        }
     }
+
+    @Override
+    public void showErrorMsg(String msg) {
+        SnackbarUtil.show(((ViewGroup) findViewById(android.R.id.content)).getChildAt(0), msg);
+    }
+
+    @Override
+    public void useNightMode(boolean isNight) {
+        if (isNight) {
+            AppCompatDelegate.setDefaultNightMode(
+                    AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(
+                    AppCompatDelegate.MODE_NIGHT_NO);
+        }
+        recreate();
+    }
+
+    @Override
+    public void stateError() {
+
+    }
+
+    @Override
+    public void stateEmpty() {
+
+    }
+
+    @Override
+    public void stateLoading() {
+
+    }
+
+    @Override
+    public void stateMain() {
+
+    }
+
+    protected abstract void initInject();
 }

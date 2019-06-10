@@ -1,35 +1,37 @@
 package com.zhaoxiao.androidformworkapp.model.http;
 
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.model.bean.CommentBean;
-import com.codeest.geeknews.model.bean.DailyBeforeListBean;
-import com.codeest.geeknews.model.bean.DailyListBean;
-import com.codeest.geeknews.model.bean.DetailExtraBean;
-import com.codeest.geeknews.model.bean.GankItemBean;
-import com.codeest.geeknews.model.bean.GankSearchItemBean;
-import com.codeest.geeknews.model.bean.GoldListBean;
-import com.codeest.geeknews.model.bean.HotListBean;
-import com.codeest.geeknews.model.bean.NodeBean;
-import com.codeest.geeknews.model.bean.NodeListBean;
-import com.codeest.geeknews.model.bean.RepliesListBean;
-import com.codeest.geeknews.model.bean.SectionChildListBean;
-import com.codeest.geeknews.model.bean.SectionListBean;
-import com.codeest.geeknews.model.bean.ThemeChildListBean;
-import com.codeest.geeknews.model.bean.ThemeListBean;
-import com.codeest.geeknews.model.bean.VersionBean;
-import com.codeest.geeknews.model.bean.WXItemBean;
-import com.codeest.geeknews.model.bean.WelcomeBean;
-import com.codeest.geeknews.model.bean.ZhihuDetailBean;
-import com.codeest.geeknews.model.http.api.GankApis;
-import com.codeest.geeknews.model.http.api.GoldApis;
-import com.codeest.geeknews.model.http.api.MyApis;
-import com.codeest.geeknews.model.http.api.VtexApis;
-import com.codeest.geeknews.model.http.api.WeChatApis;
-import com.codeest.geeknews.model.http.api.ZhihuApis;
-import com.codeest.geeknews.model.http.response.GankHttpResponse;
-import com.codeest.geeknews.model.http.response.GoldHttpResponse;
-import com.codeest.geeknews.model.http.response.MyHttpResponse;
-import com.codeest.geeknews.model.http.response.WXHttpResponse;
+
+
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.model.bean.CommentBean;
+import com.zhaoxiao.androidformworkapp.model.bean.DailyBeforeListBean;
+import com.zhaoxiao.androidformworkapp.model.bean.DailyListBean;
+import com.zhaoxiao.androidformworkapp.model.bean.DetailExtraBean;
+import com.zhaoxiao.androidformworkapp.model.bean.GankItemBean;
+import com.zhaoxiao.androidformworkapp.model.bean.GankSearchItemBean;
+import com.zhaoxiao.androidformworkapp.model.bean.GoldListBean;
+import com.zhaoxiao.androidformworkapp.model.bean.HotListBean;
+import com.zhaoxiao.androidformworkapp.model.bean.NodeBean;
+import com.zhaoxiao.androidformworkapp.model.bean.NodeListBean;
+import com.zhaoxiao.androidformworkapp.model.bean.RepliesListBean;
+import com.zhaoxiao.androidformworkapp.model.bean.SectionChildListBean;
+import com.zhaoxiao.androidformworkapp.model.bean.SectionListBean;
+import com.zhaoxiao.androidformworkapp.model.bean.ThemeChildListBean;
+import com.zhaoxiao.androidformworkapp.model.bean.ThemeListBean;
+import com.zhaoxiao.androidformworkapp.model.bean.VersionBean;
+import com.zhaoxiao.androidformworkapp.model.bean.WXItemBean;
+import com.zhaoxiao.androidformworkapp.model.bean.WelcomeBean;
+import com.zhaoxiao.androidformworkapp.model.bean.ZhihuDetailBean;
+import com.zhaoxiao.androidformworkapp.model.http.api.GankApis;
+import com.zhaoxiao.androidformworkapp.model.http.api.GoldApis;
+import com.zhaoxiao.androidformworkapp.model.http.api.MyApis;
+import com.zhaoxiao.androidformworkapp.model.http.api.VtexApis;
+import com.zhaoxiao.androidformworkapp.model.http.api.WeChatApis;
+import com.zhaoxiao.androidformworkapp.model.http.api.ZhihuApis;
+import com.zhaoxiao.androidformworkapp.model.http.response.GankHttpResponse;
+import com.zhaoxiao.androidformworkapp.model.http.response.GoldHttpResponse;
+import com.zhaoxiao.androidformworkapp.model.http.response.MyHttpResponse;
+import com.zhaoxiao.androidformworkapp.model.http.response.WXHttpResponse;
 
 import java.util.List;
 
@@ -38,7 +40,6 @@ import javax.inject.Inject;
 import io.reactivex.Flowable;
 
 /**
- * Created by codeest on 2016/8/3.
  */
 public class RetrofitHelper implements HttpHelper {
 

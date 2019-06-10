@@ -8,13 +8,17 @@ import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
 
+import com.zhaoxiao.androidformworkapp.di.component.AppComponent;
+import com.zhaoxiao.androidformworkapp.di.module.AppModule;
+import com.zhaoxiao.androidformworkapp.di.module.HttpModule;
+
 import java.util.HashSet;
 import java.util.Set;
 
 public class App extends Application {
     private static App instance;
     private Set<Activity> allActivities;
-
+    public static AppComponent appComponent;
     public static int SCREEN_WIDTH = -1;
     public static int SCREEN_HEIGHT = -1;
     public static float DIMEN_RATE = -1.0F;
@@ -97,7 +101,15 @@ public class App extends Application {
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(0);
     }
-
+    public static AppComponent getAppComponent(){
+        if (appComponent == null) {
+            appComponent = DaggerAppComponent.builder()
+                    .appModule(new AppModule(instance))
+                    .httpModule(new HttpModule())
+                    .build();
+        }
+        return appComponent;
+    }
     /**
      * 这还有一系列的第三方SDK的初始化
      */
