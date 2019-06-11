@@ -34,7 +34,8 @@ import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import vip.zhaoxiao.androidformworkapp.androidformworkapp.BuildConfig;
 
@@ -203,7 +204,7 @@ public class HttpModule {
         return builder
                 .baseUrl(url)
                 .client(client)
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
