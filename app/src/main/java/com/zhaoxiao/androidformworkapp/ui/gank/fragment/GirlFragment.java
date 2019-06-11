@@ -7,19 +7,19 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.base.BaseFragment;
-import com.codeest.geeknews.base.contract.gank.GirlContract;
-import com.codeest.geeknews.model.bean.GankItemBean;
-import com.codeest.geeknews.presenter.gank.GirlPresenter;
-import com.codeest.geeknews.ui.gank.activity.GirlDetailActivity;
-import com.codeest.geeknews.ui.gank.adapter.GirlAdapter;
+import com.zhaoxiao.androidformworkapp.base.BaseFragment;
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.base.contract.gank.GirlContract;
+import com.zhaoxiao.androidformworkapp.model.bean.GankItemBean;
+import com.zhaoxiao.androidformworkapp.presenter.gank.GirlPresenter;
+import com.zhaoxiao.androidformworkapp.ui.gank.activity.GirlDetailActivity;
+import com.zhaoxiao.androidformworkapp.ui.gank.adapter.GirlAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/19.

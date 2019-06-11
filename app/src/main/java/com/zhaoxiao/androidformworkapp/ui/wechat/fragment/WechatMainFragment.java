@@ -4,17 +4,18 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.base.RootFragment;
-import com.codeest.geeknews.base.contract.wechat.WechatContract;
-import com.codeest.geeknews.model.bean.WXItemBean;
-import com.codeest.geeknews.presenter.wechat.WechatPresenter;
-import com.codeest.geeknews.ui.wechat.adapter.WechatAdapter;
+
+import com.zhaoxiao.androidformworkapp.base.RootFragment;
+import com.zhaoxiao.androidformworkapp.base.contract.wechat.WechatContract;
+import com.zhaoxiao.androidformworkapp.model.bean.WXItemBean;
+import com.zhaoxiao.androidformworkapp.presenter.wechat.WechatPresenter;
+import com.zhaoxiao.androidformworkapp.ui.wechat.adapter.WechatAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/29.

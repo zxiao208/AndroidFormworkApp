@@ -12,21 +12,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.App;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.base.SimpleActivity;
-import com.codeest.geeknews.model.bean.RealmLikeBean;
-import com.codeest.geeknews.model.db.RealmHelper;
-import com.codeest.geeknews.model.prefs.ImplPreferencesHelper;
-import com.codeest.geeknews.util.ShareUtil;
-import com.codeest.geeknews.util.SystemUtil;
 import com.tencent.smtt.sdk.WebChromeClient;
 import com.tencent.smtt.sdk.WebSettings;
 import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
+import com.zhaoxiao.androidformworkapp.base.App;
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.base.SimpleActivity;
+import com.zhaoxiao.androidformworkapp.model.bean.RealmLikeBean;
+import com.zhaoxiao.androidformworkapp.model.db.RealmHelper;
+import com.zhaoxiao.androidformworkapp.model.prefs.ImplPreferencesHelper;
+import com.zhaoxiao.androidformworkapp.utils.ShareUtil;
+import com.zhaoxiao.androidformworkapp.utils.SystemUtil;
 
 import butterknife.BindView;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/20.

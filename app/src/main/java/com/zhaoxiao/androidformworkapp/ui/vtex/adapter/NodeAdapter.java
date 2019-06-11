@@ -10,14 +10,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.ui.vtex.activity.NodeListActivity;
-import com.codeest.geeknews.util.SystemUtil;
-import com.codeest.geeknews.widget.FlowLayout;
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.ui.vtex.activity.NodeListActivity;
+import com.zhaoxiao.androidformworkapp.utils.SystemUtil;
+import com.zhaoxiao.androidformworkapp.widget.FlowLayout;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/12/29.

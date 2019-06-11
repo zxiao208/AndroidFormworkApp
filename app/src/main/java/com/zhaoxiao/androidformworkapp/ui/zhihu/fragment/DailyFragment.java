@@ -8,26 +8,28 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.base.RootFragment;
-import com.codeest.geeknews.base.contract.zhihu.DailyContract;
-import com.codeest.geeknews.component.RxBus;
-import com.codeest.geeknews.model.bean.DailyBeforeListBean;
-import com.codeest.geeknews.model.bean.DailyListBean;
-import com.codeest.geeknews.presenter.zhihu.DailyPresenter;
-import com.codeest.geeknews.ui.zhihu.activity.CalendarActivity;
-import com.codeest.geeknews.ui.zhihu.activity.ZhihuDetailActivity;
-import com.codeest.geeknews.ui.zhihu.adapter.DailyAdapter;
-import com.codeest.geeknews.util.CircularAnimUtil;
-import com.codeest.geeknews.util.DateUtil;
-import com.prolificinteractive.materialcalendarview.CalendarDay;
+
+
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.base.RootFragment;
+import com.zhaoxiao.androidformworkapp.base.contract.zhihu.DailyContract;
+import com.zhaoxiao.androidformworkapp.component.RxBus;
+import com.zhaoxiao.androidformworkapp.model.bean.DailyBeforeListBean;
+import com.zhaoxiao.androidformworkapp.model.bean.DailyListBean;
+import com.zhaoxiao.androidformworkapp.presenter.zhihu.DailyPresenter;
+import com.zhaoxiao.androidformworkapp.ui.zhihu.activity.CalendarActivity;
+import com.zhaoxiao.androidformworkapp.ui.zhihu.activity.ZhihuDetailActivity;
+import com.zhaoxiao.androidformworkapp.ui.zhihu.adapter.DailyAdapter;
+import com.zhaoxiao.androidformworkapp.utils.CircularAnimUtil;
+import com.zhaoxiao.androidformworkapp.utils.DateUtil;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 2016/8/11.
@@ -88,8 +90,8 @@ public class DailyFragment extends RootFragment<DailyPresenter> implements Daily
                     int year = Integer.valueOf(currentDate.substring(0,4));
                     int month = Integer.valueOf(currentDate.substring(4,6));
                     int day = Integer.valueOf(currentDate.substring(6,8));
-                    CalendarDay date = CalendarDay.from(year, month - 1, day);
-                    RxBus.getDefault().post(date);
+
+                    RxBus.getDefault().post(new Date());
                 }
             }
         });

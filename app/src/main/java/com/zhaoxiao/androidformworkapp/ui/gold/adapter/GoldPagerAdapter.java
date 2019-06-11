@@ -4,7 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.codeest.geeknews.ui.gold.fragment.GoldPagerFragment;
+
+import com.zhaoxiao.androidformworkapp.ui.gold.fragment.GoldPagerFragment;
 
 import java.util.List;
 

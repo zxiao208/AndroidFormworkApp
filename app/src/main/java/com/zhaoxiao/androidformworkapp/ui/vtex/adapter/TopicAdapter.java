@@ -8,17 +8,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.component.ImageLoader;
-import com.codeest.geeknews.model.bean.TopicListBean;
-import com.codeest.geeknews.ui.vtex.activity.RepliesActivity;
-import com.codeest.geeknews.widget.SquareImageView;
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.component.ImageLoader;
+import com.zhaoxiao.androidformworkapp.model.bean.TopicListBean;
+import com.zhaoxiao.androidformworkapp.ui.vtex.activity.RepliesActivity;
+import com.zhaoxiao.androidformworkapp.widget.SquareImageView;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/12/23.

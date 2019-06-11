@@ -4,17 +4,20 @@ import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
 
-import com.codeest.geeknews.app.App;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.util.SystemUtil;
-import com.codeest.geeknews.widget.AppBlockCanaryContext;
+
 import com.github.moduth.blockcanary.BlockCanary;
 import com.orhanobut.logger.Logger;
+
 import com.squareup.leakcanary.LeakCanary;
 import com.tencent.bugly.crashreport.CrashReport;
 import com.tencent.smtt.sdk.QbSdk;
+import com.zhaoxiao.androidformworkapp.base.App;
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.utils.SystemUtil;
+import com.zhaoxiao.androidformworkapp.widget.AppBlockCanaryContext;
 
-import static com.codeest.geeknews.util.LogUtil.isDebug;
+import static com.zhaoxiao.androidformworkapp.utils.LogUtil.isDebug;
+
 
 /**
  * Created by codeest on 2017/2/12.

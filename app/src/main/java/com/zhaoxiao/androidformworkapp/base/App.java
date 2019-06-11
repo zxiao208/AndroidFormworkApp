@@ -5,15 +5,20 @@ import android.app.Application;
 import android.content.Context;
 import android.support.v7.app.AppCompatDelegate;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
 
+import com.zhaoxiao.androidformworkapp.component.InitializeService;
 import com.zhaoxiao.androidformworkapp.di.component.AppComponent;
+import com.zhaoxiao.androidformworkapp.di.component.DaggerAppComponent;
 import com.zhaoxiao.androidformworkapp.di.module.AppModule;
 import com.zhaoxiao.androidformworkapp.di.module.HttpModule;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import io.realm.Realm;
 
 public class App extends Application {
     private static App instance;
@@ -35,18 +40,17 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
         instance = this;
-
+        Log.i("APP", "onCreate: instance="+instance);
         getScreenSize();
         //初始化屏幕宽高
         getScreenSize();
 
         //初始化数据库
-//        Realm.init(getApplicationContext());
+        Realm.init(getApplicationContext());
 
         //在子线程中完成其他初始化
-//        InitializeService.start(this);
+        InitializeService.start(this);
     }
 
     /**

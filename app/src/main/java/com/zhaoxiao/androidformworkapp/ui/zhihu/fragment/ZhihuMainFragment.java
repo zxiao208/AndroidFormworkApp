@@ -4,20 +4,20 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.base.SimpleFragment;
-import com.codeest.geeknews.ui.zhihu.adapter.ZhihuMainAdapter;
+import com.zhaoxiao.androidformworkapp.base.SimpleFragment;
+import com.zhaoxiao.androidformworkapp.ui.zhihu.adapter.ZhihuMainAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/11.
  */
 
-public class ZhihuMainFragment extends SimpleFragment{
+public class ZhihuMainFragment extends SimpleFragment {
 
     @BindView(R.id.tab_zhihu_main)
     TabLayout mTabLayout;

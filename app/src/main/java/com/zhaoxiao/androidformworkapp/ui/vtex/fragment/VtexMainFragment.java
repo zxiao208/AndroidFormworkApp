@@ -5,17 +5,17 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.base.SimpleFragment;
-import com.codeest.geeknews.ui.vtex.activity.NodeActivity;
-import com.codeest.geeknews.ui.vtex.adapter.VtexPagerAdapter;
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.base.SimpleFragment;
+import com.zhaoxiao.androidformworkapp.ui.vtex.activity.NodeActivity;
+import com.zhaoxiao.androidformworkapp.ui.vtex.adapter.VtexPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/12/19.

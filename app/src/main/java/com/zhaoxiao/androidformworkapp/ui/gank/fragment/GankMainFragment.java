@@ -5,23 +5,23 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.base.SimpleFragment;
-import com.codeest.geeknews.component.RxBus;
-import com.codeest.geeknews.model.event.SearchEvent;
-import com.codeest.geeknews.ui.gank.adapter.GankMainAdapter;
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.base.SimpleFragment;
+import com.zhaoxiao.androidformworkapp.component.RxBus;
+import com.zhaoxiao.androidformworkapp.model.event.SearchEvent;
+import com.zhaoxiao.androidformworkapp.ui.gank.adapter.GankMainAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/19.
  */
 
-public class GankMainFragment extends SimpleFragment{
+public class GankMainFragment extends SimpleFragment {
 
     @BindView(R.id.tab_gank_main)
     TabLayout mTabLayout;

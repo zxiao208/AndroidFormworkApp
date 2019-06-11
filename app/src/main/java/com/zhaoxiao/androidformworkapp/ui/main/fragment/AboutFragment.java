@@ -1,12 +1,14 @@
 package com.zhaoxiao.androidformworkapp.ui.main.fragment;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.base.SimpleFragment;
-import com.codeest.geeknews.util.AlipayUtil;
-import com.codeest.geeknews.util.SnackbarUtil;
+
+
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.base.SimpleFragment;
+import com.zhaoxiao.androidformworkapp.utils.AlipayUtil;
+import com.zhaoxiao.androidformworkapp.utils.SnackbarUtil;
 
 import butterknife.OnClick;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/23.

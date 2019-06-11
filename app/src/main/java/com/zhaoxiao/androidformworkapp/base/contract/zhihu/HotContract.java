@@ -1,8 +1,9 @@
 package com.zhaoxiao.androidformworkapp.base.contract.zhihu;
 
-import com.codeest.geeknews.base.BasePresenter;
-import com.codeest.geeknews.base.BaseView;
-import com.codeest.geeknews.model.bean.HotListBean;
+
+import com.zhaoxiao.androidformworkapp.base.BasePresenter;
+import com.zhaoxiao.androidformworkapp.base.BaseView;
+import com.zhaoxiao.androidformworkapp.model.bean.HotListBean;
 
 /**
  * Created by codeest on 16/8/12.

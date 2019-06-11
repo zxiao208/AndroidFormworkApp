@@ -12,14 +12,15 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.App;
-import com.codeest.geeknews.model.bean.GankItemBean;
+
+import com.zhaoxiao.androidformworkapp.base.App;
+import com.zhaoxiao.androidformworkapp.model.bean.GankItemBean;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/21.

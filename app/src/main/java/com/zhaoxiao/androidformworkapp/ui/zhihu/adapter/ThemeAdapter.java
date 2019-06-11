@@ -8,16 +8,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.App;
-import com.codeest.geeknews.component.ImageLoader;
-import com.codeest.geeknews.model.bean.ThemeListBean;
-import com.codeest.geeknews.util.SystemUtil;
+import com.zhaoxiao.androidformworkapp.base.App;
+import com.zhaoxiao.androidformworkapp.component.ImageLoader;
+import com.zhaoxiao.androidformworkapp.model.bean.ThemeListBean;
+import com.zhaoxiao.androidformworkapp.utils.SystemUtil;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/14.

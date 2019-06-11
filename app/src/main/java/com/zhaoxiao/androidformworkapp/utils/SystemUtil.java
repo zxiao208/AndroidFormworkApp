@@ -14,8 +14,8 @@ import android.support.v4.content.FileProvider;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.codeest.geeknews.app.App;
-import com.codeest.geeknews.app.Constants;
+import com.zhaoxiao.androidformworkapp.base.App;
+import com.zhaoxiao.androidformworkapp.base.Constants;
 
 import java.io.BufferedReader;
 import java.io.File;

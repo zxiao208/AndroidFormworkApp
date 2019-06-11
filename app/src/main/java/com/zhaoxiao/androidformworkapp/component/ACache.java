@@ -8,7 +8,8 @@ import android.graphics.PixelFormat;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
-import com.codeest.geeknews.app.Constants;
+
+import com.zhaoxiao.androidformworkapp.base.Constants;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

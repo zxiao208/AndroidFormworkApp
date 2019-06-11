@@ -7,21 +7,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.component.ImageLoader;
-import com.codeest.geeknews.model.bean.NodeListBean;
-import com.codeest.geeknews.model.bean.RepliesListBean;
-import com.codeest.geeknews.presenter.vtex.VtexPresenter;
-import com.codeest.geeknews.util.DateUtil;
-import com.codeest.geeknews.widget.SquareImageView;
-
-import org.sufficientlysecure.htmltextview.HtmlHttpImageGetter;
-import org.sufficientlysecure.htmltextview.HtmlTextView;
+import com.zhaoxiao.androidformworkapp.component.ImageLoader;
+import com.zhaoxiao.androidformworkapp.model.bean.NodeListBean;
+import com.zhaoxiao.androidformworkapp.model.bean.RepliesListBean;
+import com.zhaoxiao.androidformworkapp.presenter.vtex.VtexPresenter;
+import com.zhaoxiao.androidformworkapp.utils.DateUtil;
+import com.zhaoxiao.androidformworkapp.widget.SquareImageView;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/12/19.
@@ -70,7 +67,6 @@ public class RepliesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 return;
             }
             ImageLoader.load(mContext, VtexPresenter.parseImg(mTopBean.getMember().getavatar_normal()), topHolder.ivRepliesTopFace);
-            topHolder.tvRepliesTopContent.setHtml(mTopBean.getContent_rendered(), new HtmlHttpImageGetter(topHolder.tvRepliesTopContent));
             topHolder.tvRepliesTopName.setText(mTopBean.getMember().getUsername());
             topHolder.tvRepliesTopTitle.setText(mTopBean.getTitle());
             topHolder.tvRepliesTopNum.setText(String.format("%s,   共%s条回复", DateUtil.formatTime2String(mTopBean.getCreated()), mTopBean.getReplies()));
@@ -82,7 +78,6 @@ public class RepliesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             ImageLoader.load(mContext, VtexPresenter.parseImg(bean.getMember().getavatar_normal()), contentHolder.ivRepliesFace);
             contentHolder.tvRepliesName.setText(bean.getMember().getUsername());
             contentHolder.tvRepliesTips.setText(String.format("%d楼 %s", position, DateUtil.formatTime2String(bean.getCreated())));
-            contentHolder.tvRepliesContent.setHtml(bean.getContent_rendered(), new HtmlHttpImageGetter(contentHolder.tvRepliesContent));
         }
     }
 
@@ -101,8 +96,7 @@ public class RepliesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         TextView tvRepliesTopName;
         @BindView(R.id.tv_replies_top_num)
         TextView tvRepliesTopNum;
-        @BindView(R.id.tv_replies_top_content)
-        HtmlTextView tvRepliesTopContent;
+
 
         public TopViewHolder(View itemView) {
             super(itemView);
@@ -118,8 +112,6 @@ public class RepliesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         TextView tvRepliesName;
         @BindView(R.id.tv_replies_tips)
         TextView tvRepliesTips;
-        @BindView(R.id.tv_replies_content)
-        HtmlTextView tvRepliesContent;
 
         public ViewHolder(View itemView) {
             super(itemView);

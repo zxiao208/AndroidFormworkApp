@@ -11,20 +11,20 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.App;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.base.SimpleActivity;
-import com.codeest.geeknews.model.bean.RealmLikeBean;
-import com.codeest.geeknews.model.db.RealmHelper;
-import com.codeest.geeknews.util.ShareUtil;
-import com.codeest.geeknews.util.SystemUtil;
-import com.codeest.geeknews.util.ToastUtil;
+
 import com.tbruyelle.rxpermissions2.RxPermissions;
+import com.zhaoxiao.androidformworkapp.base.App;
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.base.SimpleActivity;
+import com.zhaoxiao.androidformworkapp.model.bean.RealmLikeBean;
+import com.zhaoxiao.androidformworkapp.model.db.RealmHelper;
+import com.zhaoxiao.androidformworkapp.utils.ShareUtil;
+import com.zhaoxiao.androidformworkapp.utils.SystemUtil;
+import com.zhaoxiao.androidformworkapp.utils.ToastUtil;
 
 import butterknife.BindView;
 import io.reactivex.functions.Consumer;
-import uk.co.senab.photoview.PhotoViewAttacher;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/20.
@@ -43,7 +43,6 @@ public class GirlDetailActivity extends SimpleActivity {
     Bitmap bitmap;
     RxPermissions rxPermissions;
     RealmHelper mRealmHelper;
-    PhotoViewAttacher mAttacher;
     MenuItem menuItem;
 
     String url;
@@ -69,7 +68,6 @@ public class GirlDetailActivity extends SimpleActivity {
                 public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
                     bitmap = resource;
                     ivGirlDetail.setImageBitmap(resource);
-                    mAttacher = new PhotoViewAttacher(ivGirlDetail);
                 }
             });
         }

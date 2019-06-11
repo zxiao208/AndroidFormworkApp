@@ -1,15 +1,14 @@
 package com.zhaoxiao.androidformworkapp.presenter.zhihu;
 
-import com.codeest.geeknews.base.RxPresenter;
-import com.codeest.geeknews.base.contract.zhihu.DailyContract;
-import com.codeest.geeknews.component.RxBus;
-import com.codeest.geeknews.model.DataManager;
-import com.codeest.geeknews.model.bean.DailyBeforeListBean;
-import com.codeest.geeknews.model.bean.DailyListBean;
-import com.codeest.geeknews.util.DateUtil;
-import com.codeest.geeknews.util.RxUtil;
-import com.codeest.geeknews.widget.CommonSubscriber;
-import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.zhaoxiao.androidformworkapp.base.RxPresenter;
+import com.zhaoxiao.androidformworkapp.base.contract.zhihu.DailyContract;
+import com.zhaoxiao.androidformworkapp.component.RxBus;
+import com.zhaoxiao.androidformworkapp.model.DataManager;
+import com.zhaoxiao.androidformworkapp.model.bean.DailyBeforeListBean;
+import com.zhaoxiao.androidformworkapp.model.bean.DailyListBean;
+import com.zhaoxiao.androidformworkapp.utils.DateUtil;
+import com.zhaoxiao.androidformworkapp.utils.RxUtil;
+import com.zhaoxiao.androidformworkapp.widget.CommonSubscriber;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -53,68 +52,7 @@ public class DailyPresenter extends RxPresenter<DailyContract.View> implements D
     }
 
     private void registerEvent() {
-        addSubscribe(RxBus.getDefault().toFlowable(CalendarDay.class)
-                .subscribeOn(Schedulers.io())
-                .map(new Function<CalendarDay, String>() {
-                    @Override
-                    public String apply(CalendarDay calendarDay) {
-                        StringBuilder date = new StringBuilder();
-                        String year = String.valueOf(calendarDay.getYear());
-                        String month = String.valueOf(calendarDay.getMonth() + 1);
-                        String day = String.valueOf(calendarDay.getDay() + 1);
-                        if(month.length() < 2) {
-                            month = "0" + month;
-                        }
-                        if(day.length() < 2) {
-                            day = "0" + day;
-                        }
-                        return date.append(year).append(month).append(day).toString();
-                    }
-                })
-                .filter(new Predicate<String>() {
-                    @Override
-                    public boolean test(@NonNull String s) throws Exception {
-                        if(s.equals(DateUtil.getTomorrowDate())) {
-                            getDailyData();
-                            return false;
-                        }
-                        return true;
-                    }
-                })
-                .observeOn(Schedulers.io())   //为了网络请求切到io线程
-                .flatMap(new Function<String, Flowable<DailyBeforeListBean>>() {
-                    @Override
-                    public Flowable<DailyBeforeListBean> apply(String date) {
-                        return mDataManager.fetchDailyBeforeListInfo(date);
-                    }
-                })
-                .observeOn(AndroidSchedulers.mainThread())    //为了使用Realm和显示结果切到主线程
-                .map(new Function<DailyBeforeListBean, DailyBeforeListBean>() {
-                    @Override
-                    public DailyBeforeListBean apply(DailyBeforeListBean dailyBeforeListBean) {
-                        List<DailyListBean.StoriesBean> list = dailyBeforeListBean.getStories();
-                        for(DailyListBean.StoriesBean item : list) {
-                            item.setReadState(mDataManager.queryNewsId(item.getId()));
-                        }
-                        return dailyBeforeListBean;
-                    }
-                })
-                .subscribeWith(new CommonSubscriber<DailyBeforeListBean>(mView) {
-                    @Override
-                    public void onNext(DailyBeforeListBean dailyBeforeListBean) {
-                        int year = Integer.valueOf(dailyBeforeListBean.getDate().substring(0,4));
-                        int month = Integer.valueOf(dailyBeforeListBean.getDate().substring(4,6));
-                        int day = Integer.valueOf(dailyBeforeListBean.getDate().substring(6,8));
-                        mView.showMoreContent(String.format("%d年%d月%d日",year,month,day), dailyBeforeListBean);
-                    }
 
-                    @Override
-                    public void onError(Throwable e) {
-                        super.onError(e);
-                        registerEvent();
-                    }
-                })
-        );
     }
 
     @Override

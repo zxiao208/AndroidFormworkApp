@@ -9,20 +9,21 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.component.ImageLoader;
-import com.codeest.geeknews.model.bean.RealmLikeBean;
-import com.codeest.geeknews.presenter.vtex.VtexPresenter;
-import com.codeest.geeknews.ui.gank.activity.GirlDetailActivity;
-import com.codeest.geeknews.ui.gank.activity.TechDetailActivity;
-import com.codeest.geeknews.ui.vtex.activity.RepliesActivity;
-import com.codeest.geeknews.ui.zhihu.activity.ZhihuDetailActivity;
+
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.component.ImageLoader;
+import com.zhaoxiao.androidformworkapp.model.bean.RealmLikeBean;
+import com.zhaoxiao.androidformworkapp.presenter.vtex.VtexPresenter;
+import com.zhaoxiao.androidformworkapp.ui.gank.activity.GirlDetailActivity;
+import com.zhaoxiao.androidformworkapp.ui.gank.activity.TechDetailActivity;
+import com.zhaoxiao.androidformworkapp.ui.vtex.activity.RepliesActivity;
+import com.zhaoxiao.androidformworkapp.ui.zhihu.activity.ZhihuDetailActivity;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/23.

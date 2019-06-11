@@ -4,20 +4,21 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.base.BaseFragment;
-import com.codeest.geeknews.base.contract.main.LikeContract;
-import com.codeest.geeknews.model.bean.RealmLikeBean;
-import com.codeest.geeknews.presenter.main.LikePresenter;
-import com.codeest.geeknews.ui.main.adapter.LikeAdapter;
-import com.codeest.geeknews.util.SnackbarUtil;
-import com.codeest.geeknews.widget.DefaultItemTouchHelpCallback;
+
+import com.zhaoxiao.androidformworkapp.base.BaseFragment;
+import com.zhaoxiao.androidformworkapp.base.contract.main.LikeContract;
+import com.zhaoxiao.androidformworkapp.model.bean.RealmLikeBean;
+import com.zhaoxiao.androidformworkapp.presenter.main.LikePresenter;
+import com.zhaoxiao.androidformworkapp.ui.main.adapter.LikeAdapter;
+import com.zhaoxiao.androidformworkapp.utils.SnackbarUtil;
+import com.zhaoxiao.androidformworkapp.widget.DefaultItemTouchHelpCallback;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import butterknife.BindView;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/23.

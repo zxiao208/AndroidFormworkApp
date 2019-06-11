@@ -13,29 +13,29 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.App;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.base.BaseActivity;
-import com.codeest.geeknews.base.contract.main.MainContract;
-import com.codeest.geeknews.component.RxBus;
-import com.codeest.geeknews.component.UpdateService;
-import com.codeest.geeknews.model.event.SearchEvent;
-import com.codeest.geeknews.presenter.main.MainPresenter;
-import com.codeest.geeknews.ui.gank.fragment.GankMainFragment;
-import com.codeest.geeknews.ui.gold.fragment.GoldMainFragment;
-import com.codeest.geeknews.ui.main.fragment.AboutFragment;
-import com.codeest.geeknews.ui.main.fragment.LikeFragment;
-import com.codeest.geeknews.ui.main.fragment.SettingFragment;
-import com.codeest.geeknews.ui.vtex.fragment.VtexMainFragment;
-import com.codeest.geeknews.ui.wechat.fragment.WechatMainFragment;
-import com.codeest.geeknews.ui.zhihu.fragment.ZhihuMainFragment;
-import com.codeest.geeknews.util.SystemUtil;
-import com.miguelcatalan.materialsearchview.MaterialSearchView;
+
 import com.tbruyelle.rxpermissions2.RxPermissions;
+import com.zhaoxiao.androidformworkapp.base.App;
+import com.zhaoxiao.androidformworkapp.base.BaseActivity;
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.base.contract.main.MainContract;
+import com.zhaoxiao.androidformworkapp.component.RxBus;
+import com.zhaoxiao.androidformworkapp.component.UpdateService;
+import com.zhaoxiao.androidformworkapp.model.event.SearchEvent;
+import com.zhaoxiao.androidformworkapp.presenter.main.MainPresenter;
+import com.zhaoxiao.androidformworkapp.ui.gank.fragment.GankMainFragment;
+import com.zhaoxiao.androidformworkapp.ui.gold.fragment.GoldMainFragment;
+import com.zhaoxiao.androidformworkapp.ui.main.fragment.AboutFragment;
+import com.zhaoxiao.androidformworkapp.ui.main.fragment.LikeFragment;
+import com.zhaoxiao.androidformworkapp.ui.main.fragment.SettingFragment;
+import com.zhaoxiao.androidformworkapp.ui.vtex.fragment.VtexMainFragment;
+import com.zhaoxiao.androidformworkapp.ui.wechat.fragment.WechatMainFragment;
+import com.zhaoxiao.androidformworkapp.ui.zhihu.fragment.ZhihuMainFragment;
+import com.zhaoxiao.androidformworkapp.utils.SystemUtil;
 
 import butterknife.BindView;
 import me.yokeyword.fragmentation.SupportFragment;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/9.
@@ -49,8 +49,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     Toolbar mToolbar;
     @BindView(R.id.navigation)
     NavigationView mNavigationView;
-    @BindView(R.id.view_search)
-    MaterialSearchView mSearchView;
+
 
     ZhihuMainFragment mZhihuFragment;
     GankMainFragment mGankFragment;
@@ -163,22 +162,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
                 return true;
             }
         });
-        mSearchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                if(showFragment == Constants.TYPE_GANK) {
-                    mGankFragment.doSearch(query);
-                } else if(showFragment == Constants.TYPE_WECHAT) {
-                    RxBus.getDefault().post(new SearchEvent(query, Constants.TYPE_WECHAT));
-                }
-                return false;
-            }
 
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
-            }
-        });
         if (!mPresenter.getVersionPoint() && SystemUtil.isWifiConnected()) {
             mPresenter.setVersionPoint(true);
             try {
@@ -197,18 +181,13 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         getMenuInflater().inflate(R.menu.main_menu, menu);
         MenuItem item = menu.findItem(R.id.action_search);
         item.setVisible(false);
-        mSearchView.setMenuItem(item);
         mSearchMenuItem = item;
         return true;
     }
 
     @Override
     public void onBackPressedSupport() {
-        if (mSearchView.isSearchOpen()) {
-            mSearchView.closeSearch();
-        } else {
             showExitDialog();
-        }
     }
 
     private void showExitDialog() {

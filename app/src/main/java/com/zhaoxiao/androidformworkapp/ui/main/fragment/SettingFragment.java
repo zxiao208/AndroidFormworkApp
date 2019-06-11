@@ -11,22 +11,22 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.base.BaseFragment;
-import com.codeest.geeknews.base.contract.main.SettingContract;
-import com.codeest.geeknews.component.ACache;
-import com.codeest.geeknews.component.RxBus;
-import com.codeest.geeknews.model.bean.VersionBean;
-import com.codeest.geeknews.model.event.NightModeEvent;
-import com.codeest.geeknews.presenter.main.SettingPresenter;
-import com.codeest.geeknews.ui.main.activity.MainActivity;
-import com.codeest.geeknews.util.ShareUtil;
+import com.zhaoxiao.androidformworkapp.base.BaseFragment;
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.base.contract.main.SettingContract;
+import com.zhaoxiao.androidformworkapp.component.ACache;
+import com.zhaoxiao.androidformworkapp.component.RxBus;
+import com.zhaoxiao.androidformworkapp.model.bean.VersionBean;
+import com.zhaoxiao.androidformworkapp.model.event.NightModeEvent;
+import com.zhaoxiao.androidformworkapp.presenter.main.SettingPresenter;
+import com.zhaoxiao.androidformworkapp.ui.main.activity.MainActivity;
+import com.zhaoxiao.androidformworkapp.utils.ShareUtil;
 
 import java.io.File;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/23.

@@ -6,11 +6,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.base.SimpleActivity;
-import com.codeest.geeknews.ui.zhihu.adapter.CommentMainAdapter;
-import com.codeest.geeknews.ui.zhihu.fragment.CommentFragment;
+
 import com.zhaoxiao.androidformworkapp.base.Constants;
 import com.zhaoxiao.androidformworkapp.base.SimpleActivity;
 import com.zhaoxiao.androidformworkapp.ui.zhihu.adapter.CommentMainAdapter;

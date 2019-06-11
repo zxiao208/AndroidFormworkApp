@@ -8,15 +8,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.component.ImageLoader;
-import com.codeest.geeknews.model.bean.SectionChildListBean;
-import com.codeest.geeknews.widget.SquareImageView;
+import com.zhaoxiao.androidformworkapp.component.ImageLoader;
+import com.zhaoxiao.androidformworkapp.model.bean.SectionChildListBean;
+import com.zhaoxiao.androidformworkapp.widget.SquareImageView;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/28.

@@ -4,6 +4,7 @@ package com.zhaoxiao.androidformworkapp.base;
 import android.support.v7.app.AppCompatDelegate;
 import android.view.ViewGroup;
 import com.zhaoxiao.androidformworkapp.di.component.ActivityComponent;
+import com.zhaoxiao.androidformworkapp.di.component.DaggerActivityComponent;
 import com.zhaoxiao.androidformworkapp.di.module.ActivityModule;
 import com.zhaoxiao.androidformworkapp.utils.SnackbarUtil;
 

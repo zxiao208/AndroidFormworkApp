@@ -12,11 +12,13 @@ import android.widget.TextView;
 
 import com.zhaoxiao.androidformworkapp.component.ImageLoader;
 import com.zhaoxiao.androidformworkapp.model.bean.HotListBean;
+import com.zhaoxiao.androidformworkapp.widget.SquareImageView;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/21.

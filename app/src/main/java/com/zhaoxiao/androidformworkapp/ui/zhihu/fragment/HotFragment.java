@@ -7,19 +7,20 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.base.RootFragment;
-import com.codeest.geeknews.base.contract.zhihu.HotContract;
-import com.codeest.geeknews.model.bean.HotListBean;
-import com.codeest.geeknews.presenter.zhihu.HotPresenter;
-import com.codeest.geeknews.ui.zhihu.activity.ZhihuDetailActivity;
-import com.codeest.geeknews.ui.zhihu.adapter.HotAdapter;
+
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.base.RootFragment;
+import com.zhaoxiao.androidformworkapp.base.contract.zhihu.HotContract;
+import com.zhaoxiao.androidformworkapp.model.bean.HotListBean;
+import com.zhaoxiao.androidformworkapp.presenter.zhihu.HotPresenter;
+import com.zhaoxiao.androidformworkapp.ui.zhihu.activity.ZhihuDetailActivity;
+import com.zhaoxiao.androidformworkapp.ui.zhihu.adapter.HotAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 2016/8/11.

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+import com.zhaoxiao.androidformworkapp.di.component.DaggerFragmentComponent;
 import com.zhaoxiao.androidformworkapp.di.component.FragmentComponent;
 import com.zhaoxiao.androidformworkapp.di.module.FragmentModule;
 import com.zhaoxiao.androidformworkapp.utils.SnackbarUtil;

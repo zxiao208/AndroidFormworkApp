@@ -8,12 +8,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.base.SimpleActivity;
-import com.codeest.geeknews.ui.vtex.adapter.NodeAdapter;
-import com.codeest.geeknews.util.XmlUtil;
+import com.zhaoxiao.androidformworkapp.base.SimpleActivity;
+import com.zhaoxiao.androidformworkapp.ui.vtex.adapter.NodeAdapter;
+import com.zhaoxiao.androidformworkapp.utils.XmlUtil;
 
 import butterknife.BindView;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/12/19.

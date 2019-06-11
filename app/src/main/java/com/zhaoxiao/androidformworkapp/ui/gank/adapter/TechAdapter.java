@@ -9,15 +9,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.model.bean.GankItemBean;
-import com.codeest.geeknews.ui.gank.fragment.GankMainFragment;
-import com.codeest.geeknews.util.DateUtil;
+
+import com.zhaoxiao.androidformworkapp.model.bean.GankItemBean;
+import com.zhaoxiao.androidformworkapp.ui.gank.fragment.GankMainFragment;
+import com.zhaoxiao.androidformworkapp.utils.DateUtil;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/20.

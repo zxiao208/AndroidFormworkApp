@@ -4,19 +4,20 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.base.RootFragment;
-import com.codeest.geeknews.base.contract.vtex.VtexContract;
-import com.codeest.geeknews.model.bean.TopicListBean;
-import com.codeest.geeknews.presenter.vtex.VtexPresenter;
-import com.codeest.geeknews.ui.vtex.adapter.TopicAdapter;
-import com.codeest.geeknews.widget.CommonItemDecoration;
+
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.base.RootFragment;
+import com.zhaoxiao.androidformworkapp.base.contract.vtex.VtexContract;
+import com.zhaoxiao.androidformworkapp.model.bean.TopicListBean;
+import com.zhaoxiao.androidformworkapp.presenter.vtex.VtexPresenter;
+import com.zhaoxiao.androidformworkapp.ui.vtex.adapter.TopicAdapter;
+import com.zhaoxiao.androidformworkapp.widget.CommonItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 6/12/19.

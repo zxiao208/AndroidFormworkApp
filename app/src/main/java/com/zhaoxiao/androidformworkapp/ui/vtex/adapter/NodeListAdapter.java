@@ -8,21 +8,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.component.ImageLoader;
-import com.codeest.geeknews.model.bean.NodeBean;
-import com.codeest.geeknews.model.bean.NodeListBean;
-import com.codeest.geeknews.presenter.vtex.VtexPresenter;
-import com.codeest.geeknews.ui.vtex.activity.RepliesActivity;
-import com.codeest.geeknews.util.DateUtil;
-import com.codeest.geeknews.widget.CircleImageView;
-import com.codeest.geeknews.widget.SquareImageView;
+
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.component.ImageLoader;
+import com.zhaoxiao.androidformworkapp.model.bean.NodeBean;
+import com.zhaoxiao.androidformworkapp.model.bean.NodeListBean;
+import com.zhaoxiao.androidformworkapp.presenter.vtex.VtexPresenter;
+import com.zhaoxiao.androidformworkapp.ui.vtex.activity.RepliesActivity;
+import com.zhaoxiao.androidformworkapp.utils.DateUtil;
+import com.zhaoxiao.androidformworkapp.widget.CircleImageView;
+import com.zhaoxiao.androidformworkapp.widget.SquareImageView;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/12/19.

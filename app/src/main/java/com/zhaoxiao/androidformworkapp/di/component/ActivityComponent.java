@@ -3,9 +3,9 @@ package com.zhaoxiao.androidformworkapp.di.component;
 import android.app.Activity;
 
 
-import com.zhaoxiao.androidformworkapp.androidformworkapp.MainActivity;
 import com.zhaoxiao.androidformworkapp.di.module.ActivityModule;
 import com.zhaoxiao.androidformworkapp.di.scope.ActivityScope;
+import com.zhaoxiao.androidformworkapp.ui.main.activity.MainActivity;
 import com.zhaoxiao.androidformworkapp.ui.main.activity.WelcomeActivity;
 import com.zhaoxiao.androidformworkapp.ui.vtex.activity.NodeListActivity;
 import com.zhaoxiao.androidformworkapp.ui.vtex.activity.RepliesActivity;

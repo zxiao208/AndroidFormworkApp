@@ -4,7 +4,7 @@ import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.codeest.geeknews.util.SystemUtil;
+import com.zhaoxiao.androidformworkapp.utils.SystemUtil;
 
 /**
  * Created by codeest on 16/12/24.

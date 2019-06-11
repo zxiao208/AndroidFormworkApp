@@ -6,21 +6,22 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.base.BaseFragment;
-import com.codeest.geeknews.base.contract.gold.GoldMainContract;
-import com.codeest.geeknews.model.bean.GoldManagerBean;
-import com.codeest.geeknews.model.bean.GoldManagerItemBean;
-import com.codeest.geeknews.presenter.gold.GoldMainPresenter;
-import com.codeest.geeknews.ui.gold.activity.GoldManagerActivity;
-import com.codeest.geeknews.ui.gold.adapter.GoldPagerAdapter;
+
+import com.zhaoxiao.androidformworkapp.base.BaseFragment;
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.base.contract.gold.GoldMainContract;
+import com.zhaoxiao.androidformworkapp.model.bean.GoldManagerBean;
+import com.zhaoxiao.androidformworkapp.model.bean.GoldManagerItemBean;
+import com.zhaoxiao.androidformworkapp.presenter.gold.GoldMainPresenter;
+import com.zhaoxiao.androidformworkapp.ui.gold.activity.GoldManagerActivity;
+import com.zhaoxiao.androidformworkapp.ui.gold.adapter.GoldPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/11/27.

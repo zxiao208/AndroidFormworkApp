@@ -1,11 +1,11 @@
 package com.zhaoxiao.androidformworkapp.presenter.zhihu;
 
-import com.codeest.geeknews.base.RxPresenter;
-import com.codeest.geeknews.base.contract.zhihu.SectionChildContract;
-import com.codeest.geeknews.model.DataManager;
-import com.codeest.geeknews.model.bean.SectionChildListBean;
-import com.codeest.geeknews.util.RxUtil;
-import com.codeest.geeknews.widget.CommonSubscriber;
+import com.zhaoxiao.androidformworkapp.base.RxPresenter;
+import com.zhaoxiao.androidformworkapp.base.contract.zhihu.SectionChildContract;
+import com.zhaoxiao.androidformworkapp.model.DataManager;
+import com.zhaoxiao.androidformworkapp.model.bean.SectionChildListBean;
+import com.zhaoxiao.androidformworkapp.utils.RxUtil;
+import com.zhaoxiao.androidformworkapp.widget.CommonSubscriber;
 
 import java.util.List;
 

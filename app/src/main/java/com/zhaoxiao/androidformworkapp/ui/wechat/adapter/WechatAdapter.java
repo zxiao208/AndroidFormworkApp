@@ -7,17 +7,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.component.ImageLoader;
-import com.codeest.geeknews.model.bean.WXItemBean;
-import com.codeest.geeknews.ui.gank.activity.TechDetailActivity;
-import com.codeest.geeknews.widget.SquareImageView;
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.component.ImageLoader;
+import com.zhaoxiao.androidformworkapp.model.bean.WXItemBean;
+import com.zhaoxiao.androidformworkapp.ui.gank.activity.TechDetailActivity;
+import com.zhaoxiao.androidformworkapp.widget.SquareImageView;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/29.

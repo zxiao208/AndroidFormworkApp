@@ -8,18 +8,19 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.base.RootActivity;
-import com.codeest.geeknews.base.contract.zhihu.SectionChildContract;
-import com.codeest.geeknews.model.bean.SectionChildListBean;
-import com.codeest.geeknews.presenter.zhihu.SectionChildPresenter;
-import com.codeest.geeknews.ui.zhihu.adapter.SectionChildAdapter;
+
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.base.RootActivity;
+import com.zhaoxiao.androidformworkapp.base.contract.zhihu.SectionChildContract;
+import com.zhaoxiao.androidformworkapp.model.bean.SectionChildListBean;
+import com.zhaoxiao.androidformworkapp.presenter.zhihu.SectionChildPresenter;
+import com.zhaoxiao.androidformworkapp.ui.zhihu.adapter.SectionChildAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/28.

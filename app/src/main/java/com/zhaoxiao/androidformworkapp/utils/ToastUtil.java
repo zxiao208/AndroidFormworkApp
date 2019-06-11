@@ -6,8 +6,10 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.App;
+
+import com.zhaoxiao.androidformworkapp.base.App;
+
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 2016/8/4.

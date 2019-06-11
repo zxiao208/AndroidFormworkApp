@@ -9,22 +9,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.base.RootFragment;
-import com.codeest.geeknews.base.contract.gank.TechContract;
-import com.codeest.geeknews.component.ImageLoader;
-import com.codeest.geeknews.model.bean.GankItemBean;
-import com.codeest.geeknews.presenter.gank.TechPresenter;
-import com.codeest.geeknews.ui.gank.activity.TechDetailActivity;
-import com.codeest.geeknews.ui.gank.adapter.TechAdapter;
-import com.codeest.geeknews.util.SystemUtil;
+
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.base.RootFragment;
+import com.zhaoxiao.androidformworkapp.base.contract.gank.TechContract;
+import com.zhaoxiao.androidformworkapp.component.ImageLoader;
+import com.zhaoxiao.androidformworkapp.model.bean.GankItemBean;
+import com.zhaoxiao.androidformworkapp.presenter.gank.TechPresenter;
+import com.zhaoxiao.androidformworkapp.ui.gank.activity.TechDetailActivity;
+import com.zhaoxiao.androidformworkapp.ui.gank.adapter.TechAdapter;
+import com.zhaoxiao.androidformworkapp.utils.SystemUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import jp.wasabeef.glide.transformations.BlurTransformation;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/8/19.

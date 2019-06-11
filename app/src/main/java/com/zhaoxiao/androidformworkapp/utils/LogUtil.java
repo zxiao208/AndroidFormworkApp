@@ -1,7 +1,9 @@
 package com.zhaoxiao.androidformworkapp.utils;
 
-import com.codeest.geeknews.BuildConfig;
+
 import com.orhanobut.logger.Logger;
+
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.BuildConfig;
 
 /**
  * Created by codeest on 2016/8/3.

@@ -4,17 +4,18 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.base.RootFragment;
-import com.codeest.geeknews.base.contract.zhihu.SectionContract;
-import com.codeest.geeknews.model.bean.SectionListBean;
-import com.codeest.geeknews.presenter.zhihu.SectionPresenter;
-import com.codeest.geeknews.ui.zhihu.adapter.SectionAdapter;
+
+import com.zhaoxiao.androidformworkapp.base.RootFragment;
+import com.zhaoxiao.androidformworkapp.base.contract.zhihu.SectionContract;
+import com.zhaoxiao.androidformworkapp.model.bean.SectionListBean;
+import com.zhaoxiao.androidformworkapp.presenter.zhihu.SectionPresenter;
+import com.zhaoxiao.androidformworkapp.ui.zhihu.adapter.SectionAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 2016/8/11.

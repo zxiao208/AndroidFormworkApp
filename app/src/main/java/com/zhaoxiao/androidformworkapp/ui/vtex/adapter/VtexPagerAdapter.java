@@ -6,8 +6,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.view.ViewGroup;
 
-import com.codeest.geeknews.ui.vtex.fragment.VtexMainFragment;
-import com.codeest.geeknews.ui.vtex.fragment.VtexPagerFragment;
+import com.zhaoxiao.androidformworkapp.ui.vtex.fragment.VtexMainFragment;
+import com.zhaoxiao.androidformworkapp.ui.vtex.fragment.VtexPagerFragment;
 
 import java.util.List;
 

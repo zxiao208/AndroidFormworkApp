@@ -4,20 +4,21 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.codeest.geeknews.R;
-import com.codeest.geeknews.app.Constants;
-import com.codeest.geeknews.base.RootFragment;
-import com.codeest.geeknews.base.contract.gold.GoldContract;
-import com.codeest.geeknews.model.bean.GoldListBean;
-import com.codeest.geeknews.presenter.gold.GoldPresenter;
-import com.codeest.geeknews.ui.gold.adapter.GoldListAdapter;
-import com.codeest.geeknews.widget.GoldItemDecoration;
-import com.codeest.geeknews.widget.TouchSwipeRefreshLayout;
+
+import com.zhaoxiao.androidformworkapp.base.Constants;
+import com.zhaoxiao.androidformworkapp.base.RootFragment;
+import com.zhaoxiao.androidformworkapp.base.contract.gold.GoldContract;
+import com.zhaoxiao.androidformworkapp.model.bean.GoldListBean;
+import com.zhaoxiao.androidformworkapp.presenter.gold.GoldPresenter;
+import com.zhaoxiao.androidformworkapp.ui.gold.adapter.GoldListAdapter;
+import com.zhaoxiao.androidformworkapp.widget.GoldItemDecoration;
+import com.zhaoxiao.androidformworkapp.widget.TouchSwipeRefreshLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import vip.zhaoxiao.androidformworkapp.androidformworkapp.R;
 
 /**
  * Created by codeest on 16/11/27.
