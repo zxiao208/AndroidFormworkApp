@@ -6,7 +6,7 @@
     <include layout="@layout/view_toolbar"
         android:id="@+id/toolbar"/>
 
-    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+    <vip.prolificinteractive.materialcalendarview.MaterialCalendarView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/view_calender"
         android:layout_width="match_parent"

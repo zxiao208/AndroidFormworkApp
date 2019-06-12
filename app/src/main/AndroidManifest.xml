@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="vip.zhaoxiao.androidformworkapp.androidformworkapp">
+    package="vip.zhaoxiao.androidformworkapp">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -8,25 +8,81 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <application
-        android:name="com.zhaoxiao.androidformworkapp.base.App"
+        android:name=".base.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.zhaoxiao.androidformworkapp.ui.main.activity.WelcomeActivity">
+        <activity android:name=".ui.main.activity.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.zhaoxiao.androidformworkapp.ui.main.activity.MainActivity"
+        <activity android:name=".ui.main.activity.MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/MainTheme"
             android:screenOrientation="portrait">
         </activity>
+        //知乎
+        <activity android:name=".ui.zhihu.activity.CalendarActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.zhihu.activity.ZhihuDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.zhihu.activity.CommentActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.zhihu.activity.ThemeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.zhihu.activity.SectionActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+
+        //Gank
+        <activity android:name=".ui.gank.activity.TechDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.gank.activity.GirlDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+
+        //掘金
+        <activity android:name=".ui.gold.activity.GoldManagerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+
+        //v2ex
+        <activity android:name=".ui.vtex.activity.NodeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.vtex.activity.NodeListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.vtex.activity.RepliesActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+
+        <service android:name="vip.zhaoxiao.androidformworkapp.component.UpdateService"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.zhaoxiao.geeknews.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fileprovidepaths" />
+        </provider>
     </application>
 
 </manifest>
